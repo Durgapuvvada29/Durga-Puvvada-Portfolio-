@@ -1205,8 +1205,8 @@
         I am always open to discussing new opportunities, collaborations, or just connecting with fellow professionals in the industry.
       </p>
       <div class="contact-links">
-        <a href="/cdn-cgi/l/email-protection#284c5d5a4f49585d5e5e494c491f684f45494144064b4745" class="contact-link primary">
-          &#9993; <span class="__cf_email__" data-cfemail="91f5e4e3f6f0e1e4e7e7f0f5f0a6d1f6fcf0f8fdbff2fefc">[email&#160;protected]</span>
+        <a href="mailto:durgapuvvada7@gmail.com" class="contact-link primary">
+          &#9993; durgapuvvada7@gmail.com
         </a>
         <a href="tel:+14242423579" class="contact-link primary">
           &#128222; +1 (424) 242-3579
@@ -1227,7 +1227,7 @@
   </footer>
 
   <!-- Scroll Reveal Script -->
-  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+  <script>
     // Scroll reveal - with fallback
     try {
       const observer = new IntersectionObserver((entries) => {
@@ -1243,4 +1243,12 @@
       document.querySelectorAll('.reveal').forEach(el => el.classList.add('visible'));
     }
 
-    // Close mo
+    // Close mobile menu on link click
+    document.querySelectorAll('.nav-links a').forEach(link => {
+      link.addEventListener('click', () => {
+        document.querySelector('.nav-links').classList.remove('active');
+      });
+    });
+  </script>
+</body>
+</html>
