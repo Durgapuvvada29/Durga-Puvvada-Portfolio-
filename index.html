@@ -467,6 +467,37 @@
       margin-top: 0.25rem;
     }
 
+    .timeline-details {
+      margin-top: 0.75rem;
+      padding-left: 0;
+      list-style: none;
+    }
+
+    .timeline-details li {
+      position: relative;
+      padding-left: 1rem;
+      margin-bottom: 0.5rem;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+
+    .timeline-details li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0.55rem;
+      width: 4px;
+      height: 4px;
+      background: var(--accent);
+      border-radius: 50%;
+    }
+
+    .timeline-highlight {
+      color: var(--text);
+      font-weight: 500;
+    }
+
     /* Education Section */
     .edu-cards {
       display: grid;
@@ -758,11 +789,11 @@
           <span class="highlight">Puvvada</span>
         </h1>
         <p class="hero-desc">
-          Data Engineer with 6+ years of professional experience across India and the United States, building scalable data solutions for globally recognized organizations.
+          Data Engineer with 5+ years of experience designing production-grade pipelines, real-time streaming systems, and cloud data infrastructure across financial services and hardware engineering.
         </p>
         <div class="hero-stats">
           <div class="stat-item">
-            <div class="stat-number">6+</div>
+            <div class="stat-number">5+</div>
             <div class="stat-label">Years Experience</div>
           </div>
           <div class="stat-item">
@@ -782,11 +813,11 @@
           <div class="avatar">VDP</div>
           <h3>Venkata Durga Prasad</h3>
           <div class="role">Data Engineer</div>
-          <div class="company">Synapse Design Automation Inc. &middot; Google LLC</div>
+          <div class="company">Google LLC &middot; Fremont, CA</div>
           <div class="card-tags">
-            <span class="card-tag">Data Engineering</span>
-            <span class="card-tag">Database Mgmt</span>
-            <span class="card-tag">Software Dev</span>
+            <span class="card-tag">Data Pipelines</span>
+            <span class="card-tag">Cloud Infrastructure</span>
+            <span class="card-tag">Real-time Streaming</span>
           </div>
         </div>
       </div>
@@ -856,40 +887,49 @@
       <div class="timeline-item current">
         <div class="timeline-date">January 2025 &mdash; Present</div>
         <div class="timeline-role">Data Engineer</div>
-        <div class="timeline-company">Synapse Design Automation Inc.</div>
-        <div class="timeline-client">Client: Google LLC</div>
+        <div class="timeline-company">Google LLC</div>
         <div class="timeline-location">Fremont, California</div>
+        <ul class="timeline-details">
+          <li>Rebuilt the <span class="timeline-highlight">AR Glasses validation pipeline</span> from legacy SSIS to Python ETL, cutting failures by 40% and eliminating recurring manual intervention.</li>
+          <li>Led end-to-end <span class="timeline-highlight">SQL Server to Alloy DB (PostgreSQL) migration</span>, redesigned schemas, converted T-SQL to PL/pgSQL, and reduced average query time by 30%.</li>
+          <li>Built <span class="timeline-highlight">Power BI dashboards</span> tracking 5+ hardware KPIs and failure trends in real time, used daily by the engineering team.</li>
+          <li>Architected disaster recovery and cloud scalability framework on <span class="timeline-highlight">GCP, achieving 99.9% uptime</span> across all production data infrastructure.</li>
+        </ul>
       </div>
 
       <div class="timeline-item">
-        <div class="timeline-date">April 2023 &mdash; August 2024</div>
+        <div class="timeline-date">February 2023 &mdash; December 2024</div>
         <div class="timeline-role">Data Engineer</div>
-        <div class="timeline-company">Signin Soft Inc.</div>
-        <div class="timeline-client">Client: Visa Inc.</div>
+        <div class="timeline-company">Visa Inc.</div>
         <div class="timeline-location">Naperville, Illinois</div>
-      </div>
-
-      <div class="timeline-item">
-        <div class="timeline-date">February 2023 &mdash; April 2023</div>
-        <div class="timeline-role">Software Engineer Intern</div>
-        <div class="timeline-company">Conglomerate IT LLC</div>
-        <div class="timeline-location">Addison, Texas</div>
+        <ul class="timeline-details">
+          <li>Redesigned the ETL layer using <span class="timeline-highlight">Azure Data Factory</span>, cutting runtime by 25% and adding real-time fraud detection via Event Hub, Spark, and Kafka.</li>
+          <li>Implemented <span class="timeline-highlight">Debezium/Kafka CDC pipelines</span> from MySQL and MongoDB (7TB+/month), tuned Databricks PySpark jobs by 30%, and enabled Snowpipe for near real-time Snowflake ingestion.</li>
+          <li>Reduced <span class="timeline-highlight">fraud detection latency by 40%</span> and data quality incidents by 35% through pipeline optimization and automated validation.</li>
+          <li>Designed <span class="timeline-highlight">Tableau dashboards</span> for fraud trend analysis used by 5+ compliance and BI teams, consolidating 20+ fraud KPIs into a single real-time view.</li>
+        </ul>
       </div>
 
       <div class="timeline-item">
         <div class="timeline-date">March 2020 &mdash; August 2021</div>
         <div class="timeline-role">Data Engineer</div>
-        <div class="timeline-company">Sonata Software Limited</div>
-        <div class="timeline-client">Client: Honeywell Inc.</div>
+        <div class="timeline-company">Honeywell Inc.</div>
         <div class="timeline-location">Bangalore, India</div>
+        <ul class="timeline-details">
+          <li>Optimized the entire <span class="timeline-highlight">SSIS pipeline layer</span> with indexing strategies and stored procedure tuning for aerospace sensor data, reducing execution time by 35%.</li>
+          <li>Implemented <span class="timeline-highlight">automated data validation</span> across all ingestion pipelines, cutting manual QA effort and reducing data defect rate by 30%.</li>
+        </ul>
       </div>
 
       <div class="timeline-item">
-        <div class="timeline-date">June 2019 &mdash; March 2020</div>
+        <div class="timeline-date">April 2019 &mdash; March 2020</div>
         <div class="timeline-role">Software Engineer</div>
-        <div class="timeline-company">Sonata Software Limited</div>
-        <div class="timeline-client">Client: NTT Data</div>
+        <div class="timeline-company">NTT Data Pvt Ltd</div>
         <div class="timeline-location">Bangalore, India</div>
+        <ul class="timeline-details">
+          <li>Automated manual ETL workflows using <span class="timeline-highlight">Python</span> and built Oracle data models for the FastTrack Watch analytics platform, reducing processing time by 30%.</li>
+          <li>Collaborated with business stakeholders to translate reporting needs into <span class="timeline-highlight">structured data models</span>, supporting consistent analytics delivery.</li>
+        </ul>
       </div>
 
     </div>
@@ -942,73 +982,76 @@
     <div class="skills-grid reveal">
       <div class="skill-category">
         <div class="skill-icon" style="background:rgba(96,165,250,0.1); color:var(--accent);">&#128450;</div>
-        <h3>Databases</h3>
+        <h3>Languages &amp; Scripting</h3>
         <div class="skill-list">
+          <span class="skill-pill">Python</span>
           <span class="skill-pill">SQL</span>
-          <span class="skill-pill">PostgreSQL</span>
-          <span class="skill-pill">MySQL</span>
-          <span class="skill-pill">Oracle</span>
-          <span class="skill-pill">MongoDB</span>
-          <span class="skill-pill">Database Design</span>
-          <span class="skill-pill">Query Optimization</span>
+          <span class="skill-pill">Scala</span>
+          <span class="skill-pill">PySpark</span>
+          <span class="skill-pill">NumPy</span>
+          <span class="skill-pill">Pandas</span>
+          <span class="skill-pill">Beautiful Soup</span>
         </div>
       </div>
       <div class="skill-category">
         <div class="skill-icon" style="background:rgba(245,158,11,0.1); color:var(--accent-warm);">&#9881;</div>
-        <h3>Data Engineering</h3>
+        <h3>Big Data &amp; Streaming</h3>
         <div class="skill-list">
-          <span class="skill-pill">ETL Pipelines</span>
           <span class="skill-pill">Apache Spark</span>
-          <span class="skill-pill">Data Warehousing</span>
-          <span class="skill-pill">Big Data</span>
-          <span class="skill-pill">Data Modeling</span>
-          <span class="skill-pill">Airflow</span>
-        </div>
-      </div>
-      <div class="skill-category">
-        <div class="skill-icon" style="background:rgba(52,211,153,0.1); color:var(--accent-green);">&#128187;</div>
-        <h3>Software Engineering</h3>
-        <div class="skill-list">
-          <span class="skill-pill">Python</span>
-          <span class="skill-pill">Java</span>
-          <span class="skill-pill">REST APIs</span>
-          <span class="skill-pill">Git</span>
-          <span class="skill-pill">CI/CD</span>
-          <span class="skill-pill">Agile</span>
+          <span class="skill-pill">Apache Kafka</span>
+          <span class="skill-pill">Databricks</span>
+          <span class="skill-pill">Snowflake</span>
+          <span class="skill-pill">Debezium (CDC)</span>
+          <span class="skill-pill">dbt</span>
+          <span class="skill-pill">Terraform</span>
         </div>
       </div>
       <div class="skill-category">
         <div class="skill-icon" style="background:rgba(168,85,247,0.1); color:#a855f7;">&#9729;</div>
         <h3>Cloud Platforms</h3>
         <div class="skill-list">
-          <span class="skill-pill">Google Cloud</span>
-          <span class="skill-pill">AWS</span>
-          <span class="skill-pill">Azure</span>
+          <span class="skill-pill">GCP</span>
           <span class="skill-pill">BigQuery</span>
-          <span class="skill-pill">Cloud Storage</span>
+          <span class="skill-pill">Alloy DB</span>
+          <span class="skill-pill">Azure</span>
+          <span class="skill-pill">ADF</span>
+          <span class="skill-pill">ADL</span>
+          <span class="skill-pill">Event Hub</span>
         </div>
       </div>
       <div class="skill-category">
-        <div class="skill-icon" style="background:rgba(244,63,94,0.1); color:#f43f5e;">&#128202;</div>
-        <h3>Analytics &amp; Visualization</h3>
+        <div class="skill-icon" style="background:rgba(52,211,153,0.1); color:var(--accent-green);">&#128187;</div>
+        <h3>Databases &amp; ETL</h3>
         <div class="skill-list">
-          <span class="skill-pill">Tableau</span>
-          <span class="skill-pill">Power BI</span>
-          <span class="skill-pill">Data Analysis</span>
-          <span class="skill-pill">Reporting</span>
+          <span class="skill-pill">SQL Server</span>
+          <span class="skill-pill">PostgreSQL</span>
+          <span class="skill-pill">MySQL</span>
+          <span class="skill-pill">Oracle</span>
+          <span class="skill-pill">Snowflake</span>
+          <span class="skill-pill">SSIS</span>
+          <span class="skill-pill">Apache Airflow</span>
         </div>
       </div>
       <div class="skill-category">
-        <div class="skill-icon" style="background:rgba(6,182,212,0.1); color:#06b6d4;">&#128295;</div>
-        <h3>Tools &amp; Workflow</h3>
+        <div class="skill-icon" style="background:rgba(244,63,94,0.1); color:#f43f5e;">&#128295;</div>
+        <h3>Version Control &amp; DevOps</h3>
         <div class="skill-list">
-          <span class="skill-pill">Docker</span>
-          <span class="skill-pill">Kubernetes</span>
-          <span class="skill-pill">Jenkins</span>
-          <span class="skill-pill">JIRA</span>
+          <span class="skill-pill">Git</span>
+          <span class="skill-pill">GitHub</span>
+          <span class="skill-pill">CI/CD Pipelines</span>
           <span class="skill-pill">Linux</span>
+          <span class="skill-pill">Shell Scripting</span>
         </div>
       </div>
+      <div class="skill-category">
+        <div class="skill-icon" style="background:rgba(6,182,212,0.1); color:#06b6d4;">&#128202;</div>
+        <h3>BI &amp; Analytics</h3>
+        <div class="skill-list">
+          <span class="skill-pill">Power BI</span>
+          <span class="skill-pill">Tableau</span>
+        </div>
+      </div>
+    </div>
     </div>
   </section>
 
@@ -1023,8 +1066,8 @@
         I am always open to discussing new opportunities, collaborations, or just connecting with fellow professionals in the industry.
       </p>
       <div class="contact-links">
-        <a href="mailto:durgapuvvada.doc@gmail.com" class="contact-link primary">
-          &#9993; durgapuvvada.doc@gmail.com
+        <a href="mailto:durgapuvvada7@gmail.com" class="contact-link primary">
+          &#9993; durgapuvvada7@gmail.com
         </a>
         <a href="https://linkedin.com/in/" class="contact-link secondary" target="_blank">
           &#128279; LinkedIn
