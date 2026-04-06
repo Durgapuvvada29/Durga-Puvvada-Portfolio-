@@ -1081,8 +1081,8 @@
         I am always open to discussing new opportunities, collaborations, or just connecting with fellow professionals in the industry.
       </p>
       <div class="contact-links">
-        <a href="/cdn-cgi/l/email-protection#b1d5c4c3d6d0c1c4c7c7d0d5d086f1d6dcd0d8dd9fd2dedc" class="contact-link primary">
-          &#9993; <span class="__cf_email__" data-cfemail="264253544147565350504742471166414b474f4a0845494b">[email&#160;protected]</span>
+        <a href="mailto:durgapuvvada7@gmail.com" class="contact-link primary">
+          &#9993; durgapuvvada7@gmail.com
         </a>
         <a href="https://linkedin.com/in/" class="contact-link secondary" target="_blank">
           &#128279; LinkedIn
@@ -1100,15 +1100,28 @@
   </footer>
 
   <!-- Scroll Reveal Script -->
-  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-        }
+  <script>
+    // Scroll reveal - with fallback
+    try {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+          }
+        });
+      }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+
+      document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    } catch(e) {
+      document.querySelectorAll('.reveal').forEach(el => el.classList.add('visible'));
+    }
+
+    // Close mobile menu on link click
+    document.querySelectorAll('.nav-links a').forEach(link => {
+      link.addEventListener('click', () => {
+        document.querySelector('.nav-links').classList.remove('active');
       });
-    }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
-
-    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-
-    // Close mob
+    });
+  </script>
+</body>
+</html>
